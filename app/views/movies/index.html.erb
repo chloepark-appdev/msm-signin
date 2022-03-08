@@ -46,15 +46,12 @@
         <input type="text" id="duration_box" name="query_duration">
       </div>
 
-
       <div>
         <label for="image_box">
           Image
         </label>
         <input type="text" id="image_box" name="query_image">
       </div>
-
-
 
       <div>
         <label for="director_id_box">
@@ -115,7 +112,7 @@
         </td>
 
         <td>
-          <img src="<%= a_movie.image%>" />
+         <img src="<%= a_movie.image%>" />
         </td>
 
         <td>
@@ -127,7 +124,8 @@
         </td>
 
         <td>
-          <%= a_movie.director_id %>
+          <%= a_movie.director&.name %>
+          (<%= a_movie.director&.dob %>)
         </td>
 
         <td>
